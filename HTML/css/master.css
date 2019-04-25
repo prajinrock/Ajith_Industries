@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body{
 	padding: 0px;
 	margin: 0px;
@@ -14,6 +17,7 @@ body{
 	background-color: #343434;
 	width: 100%;
 	height: 110px;
+	z-index: 999;
 }
 .navbar-default{
 	background-color: transparent;
@@ -266,6 +270,7 @@ body{
 	font-size: 40px;
 	font-weight: 700;
 	color: #f9b200;
+	padding-bottom: 30px;
 }
 .contImage{
 	width: 60%;
@@ -304,6 +309,7 @@ body{
 	border:0px;
 	border-radius: 6px;
 	outline: none;
+	cursor: pointer;
 }
 .footerSection{
 	background-color: #464646;
@@ -322,4 +328,216 @@ body{
 }
 .socialLinks a{
 	padding-left: 5px;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .sliderBox {
+  padding-top: 110px;
+}
+/*spinner*/
+.loader_div{
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: #ccc;
+	/*display: none;*/
+	z-index: 1050;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.spinner {
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #333;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+/*spinner ends*/
+.galleryBox{
+	padding: 60px 0px;
+	background-color: #262626;
+}
+.galleryBox h1{
+	font-size: 40px;
+	color: #ffb700;
+	font-weight: 700;
+	text-align: center;
+	padding-bottom: 40px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .topBar{
+		height: auto;
+	}
+	.navbar{
+		margin-bottom: 0px;
+	}
+	.navbar-toggle{
+		margin-top: 28px;
+	}
+	.navbar-default .navbar-toggle{
+		border-color: #ffb700;
+	}
+	.navbar-default .navbar-toggle .icon-bar{
+		background-color: #ffb700;
+	}
+	.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+		background-color: #222;
+	}
+	.navbar-nav>li>a{
+		padding-top: 15px;
+	}
+	.carousel .item{
+		height: 300px;
+	}
+	.carousel-inner > .item > img{
+		height: 300px;
+	}
+	.carousel-control{
+		height: 300px;
+	}
+	.carousel{
+		height: 300px;
+	}
+	.carousel-caption, .carousel-indicators{
+		bottom: 20px;
+	}
+	.thumb_Container{
+		margin-top: 0px;
+		flex-direction: column;
+	}
+	.thumBox{
+		width: 100%;
+		display: flex;
+	}
+	.thumbImage{
+		width: 35%;
+		padding-top: 20px;
+	}
+	.thumbText{
+		width: 60%;
+	}
+	.infraContent{
+		flex-wrap: wrap;
+	}
+	.classTitle{
+		width: 100% !important;
+		text-align: center;
+		padding-bottom: 20px;
+	}
+	.infraBox2{
+		width: 48%  !important;
+	}
+	.itemList{
+		flex-wrap: wrap;
+		padding-bottom: 30px;
+		padding-top: 20px;
+	}
+	.itemBox{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.contactBox{
+		flex-wrap: wrap;
+		align-items: center;
+		flex-direction: column;
+	}
+	.contImage{
+		width: 75%;
+	}
+	.ContactForm{
+		width: 75%;
+		margin-top: 20px;
+	}
+	.board3, .board2, .board1{
+		background-color: #ffb700;
+		background-image: none;
+		padding-left: 0px;
+		padding-right: 0px;
+		width: 100%;
+	}
+	.footerSection .flexBox{
+		flex-direction: column;
+		align-items: center;
+	}
+	.copyright{
+		margin-right: 0px;
+		padding-bottom: 10px;
+	}
+}
+@media only screen and (max-width: 400px) {
+	
+	h1{
+		font-size: 24px;
+	}
+	.mainTitle h1{
+		padding: 0px 15px;
+	}
+	.infraSubContent{
+		font-size: 24px;
+	}
+	.infraBox2{
+		width: 100% !important;
+		margin-bottom: 10px;
+	}
+	.infraImage{
+		width: 100px;
+		height: 100px;
+	}
+	.thumBox{
+		flex-direction: column;
+	}
+	.thumbText, .thumbImage{
+		width: 100%;
+	}
+	.board3, .board2, .board1{
+		height: auto;
+	}
+	.contImage{
+		width: 100%;
+	}
+	.ContactForm{
+		width: 100%;
+	}
 }
